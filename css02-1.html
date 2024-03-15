@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 선택자</title>
+    <style>
+        /* +는태그명1 바로 아래있는 태그2만 */
+        h1 + p{
+            color:aqua;
+        }
+
+        /* ~는 같은 항렬에 있는 아래쪽 형제만 */
+        h1 ~ p{
+            color:aqua;
+        }
+
+        /* >는 바로밑 자식만 */
+        /* p > span{
+            color:aqua;
+        } */
+
+        /* 스페이스 바는 밑에있는 자식 자손 모두body 밑에 있는 p태그 밑에 span 모두 */
+        /* body p span{
+            color:aqua;
+        } */
+
+
+        /* [class="nana"]{
+            color:crimson;
+        } */
+    </style>
+    <!--  -->
+    <!-- *는 전체 선택자  -->
+</head>
+<body>
+    <p>111</p>
+    <h1 class="nana">문서 제목</h1>
+    <p>문단표시 가가가</p>
+    <p class="nana">문단표시 나나나</p>
+    <p id="dada">문단표시 다다다</p>
+    <p>문단표시 <span>라라라</span></p>
+</body>
+</html>
