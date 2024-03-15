@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>의사 요소(특정 부분 선택)</title>
+    <style>
+        p::first-line{
+            color: aqua;
+        }
+        p::first-letter{
+            color: red;
+            font-size: 50px;
+        }
+        li::first-letter{
+            color: blue;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        첫 번째 라인 첫 번째 글자
+        첫 번째 라인 첫 번째 글자
+        첫 번째 라인 첫 번째 글자
+        첫 번째 라인 첫 번째 글자
+        첫 번째 라인 첫 번째 글자
+        첫 번째 라인 첫 번째 글자
+        첫 번째 라인 첫 번째 글자
+    </p>
+    <ul>
+        <li>고양이</li>
+        <li>강아지</li>
+        <li>햄스터</li>
+    </ul>
+</body>
+</html>
