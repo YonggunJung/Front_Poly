@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframe</title>
+    <style>
+        body{
+            background-color: #000;
+            color: #fff;
+        }
+        iframe{
+            width: 800px; height: 500px;
+        }
+        .box{
+            width: 300px;
+        }
+        .a{
+            background-color: brown;
+            overflow: hidden;           /* 데이터가 넘어가면 자른다 */
+            white-space: nowrap;
+            text-overflow: clip;
+        }
+        .b{
+            background-color: darkgreen;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+<body>
+    <h1>iframe 연습</h1>
+    <iframe src="https://www.kopo.ac.kr/busan/index.do#sec1" frameborder="0"></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Lob6bD_ytd4?si=4FVhrTLGsjHAo8zz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <div class="box a">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus minus officia provident cum tempora, corrupti quod iure dolores dolore fugit esse placeat dolorem libero quisquam ex? Consequuntur praesentium veritatis voluptate.</div>
+    <div class="box b">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit hic et deserunt praesentium, at enim itaque! Nostrum at sapiente ratione?</div>
+</body>
+</html>
