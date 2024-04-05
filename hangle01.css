@@ -1,0 +1,130 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    background-color: #000;
+    font-family: "Noto Sans", "Noto Sans KR", 'sans-serif';
+    font-weight: 300;
+    font-size: 15px;
+    color: #ccc;
+    line-height: 1.5em;
+    margin: 0;
+}
+a{
+    text-decoration: none;   /*밑줄 없애기*/
+    color: #bbb;
+}
+/* Reset CSS */
+h1,h2,h3,h4,h5,h6{
+    font-weight: 500; margin-top: 0;
+}
+
+.program{
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+}
+.program .inner{
+    width: 1150px;
+}
+.program .inner h1{
+    /* border-bottom: 1px solid #444;
+    padding-bottom: 30px; */
+    margin-bottom: 50px;
+}
+.items{
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 40px;
+}
+.item{
+    flex: 1;
+    /* border: 1px solid red; */
+}
+.item-list{
+    text-align: center;
+    padding: 15px 0;
+    color: yellow;
+}
+.item-info{
+    background-color: #06161d;
+}
+.item:nth-child(1) .item-list{
+    background-color: #195fab;
+}
+.item:nth-child(2) .item-list{
+    background-color: #5049a9;
+}
+.item:nth-child(3) .item-list{
+    background-color: #8c66c1;
+}
+.item-list h4{
+    font-weight: 300;
+}
+.btn{
+    background-color: #28466f;
+    color: yellow;
+    display: inline-block;
+    width: 80px; height: 30px;
+    padding: 8px 0;
+}
+.btn.download{
+    width: 200px;
+}
+.item-info{
+    font-size: 14px;
+}
+.item:nth-child(1) .item-info{
+    border: 3px solid #195fab;
+}
+.item:nth-child(2) .item-info{
+    border: 3px solid #5049a9;
+}
+.item:nth-child(3) .item-info{
+    border: 3px solid #8c66c1;
+}
+.item-info p{
+    text-align: center;
+}
+.item-info ul{
+    list-style: none;
+    margin: 10px;
+    padding: 10px;
+    background-color: #222;
+}
+/* before, after */
+.item-info li::before{
+    content: "- ";
+}
+.temp{
+    display: flex;
+    justify-content: center;
+}
+
+/* ##############감추기 / 나타나기############################################# */
+/* 01 */
+/* .item{
+    position: relative;
+}
+.item-info{
+    display: none;
+    position: absolute;
+}
+.item:hover .item-info{
+    display: block;
+} */
+
+/* 02 */
+.item{
+    position: relative;
+}
+.item-info{
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.item:hover .item-info{
+    height: 200px;
+}
+
+/* 03 */

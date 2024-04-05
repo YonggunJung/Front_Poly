@@ -1,0 +1,82 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+body{
+    background-color: #000;
+    font-family: "Noto Sans", "Noto Sans KR", 'sans-serif';
+    font-weight: 300;
+    font-size: 15px;
+    color: #ccc;
+    line-height: 1.5em;
+    margin: 0;
+}
+a{
+    text-decoration: none;   /*밑줄 없애기*/
+    color: #bbb;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1em;
+}
+h1{
+    color: #fff;
+}
+.logo{
+    font-size: 2em;
+}
+.menu{
+    list-style-type: none;
+    display: flex;
+    gap: 1em;
+    margin-top: 1.8em;
+}
+.link{
+    /* border-bottom: 0.1em solid gray; */
+}
+section{
+    color: #fff;
+}
+.main{
+    display: flex;
+    justify-content: space-around;
+}
+.sub{
+    display: flex;
+    justify-content: space-around;
+}
+.box-main, .box-sub{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5em;
+}
+i{
+    margin-bottom: 0.5em;
+}
+.box-main{
+    width: 6em; height: 7em;
+    font-size: 3em;
+    color: #8ebed1;
+    background-color: #06161d;
+    border: 0.01em solid red;
+}
+.box-sub{
+    width: 5em; height: 5em;
+    font-size: 2em;
+    color: #06161d;
+    background-color: #8ebed1;
+}
+footer{
+    color: #fff;
+    border-top: 0.01em solid #8ebed1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3em
+}
+.sns{
+    display: flex;
+    gap: 0.5em;
+}
