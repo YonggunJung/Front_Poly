@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 연습 6</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+        a{
+            text-decoration: none;
+        }
+        .menu{
+            list-style: none;
+            /* border: 1px solid red; */
+            width: 200px;
+            padding: 0;
+            text-align: center;
+        }
+        .menu li>a{
+            background-color: #fff;
+            color: #000;
+            display: block;
+            padding: 5px;
+            margin-top: 3px;
+        }
+        .sub-menu{
+            border: 1px solid #ccc;
+            display: none;
+        }
+        .sub-menu a{
+            display: block;
+            padding: 5px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <ul class="menu">
+        <li>
+            <a href="#">MENU-1</a>
+            <div class="sub-menu">
+                <a href="#">sub-menu-1</a>
+                <a href="#">sub-menu-2</a>
+                <a href="#">sub-menu-3</a>
+                <a href="#">sub-menu-4</a>
+            </div>
+
+        </li>
+        <li>
+            <a href="#">MENU-2</a>
+            <div class="sub-menu">
+                <a href="#">sub-menu-1</a>
+                <a href="#">sub-menu-2</a>
+                <a href="#">sub-menu-3</a>
+                <a href="#">sub-menu-4</a>
+            </div>
+
+        </li>
+    </ul>
+
+
+    <script>
+        $('.menu li').mouseenter(function(){
+            // $('.sub-menu').slideDown()
+            //$(this).slideDown()     // this마우스가 올라간놈만 동작한다.
+            // $(this).children().slideDown()
+            $(this).children('.sub-menu').stop().slideDown()
+        })
+        $('.menu li').mouseleave(function(){
+            // $('.sub-menu').slideDown()
+            //$(this).slideDown()     // this마우스가 올라간놈만 동작한다.
+            // $(this).children().slideDown()
+            $(this).children('.sub-menu').stop().slideUp()
+        })
+    </script>
+</body>
+
+</html>

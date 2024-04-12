@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 연습 4</title>
+    <style>
+        body{
+            background-color: #000;
+            color: #fff;
+        }
+        .container{
+            width: 300px;
+
+        }
+        a{
+            display: inline-block;
+            width: 70px;
+            padding: 5px;
+            color: #fff;
+            background-color: #444;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .box{
+            width: 250px; height: 200px;
+            background-color: blue;
+            color: #ccc;
+            margin-top: 10px;
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+            text-align: center;
+            line-height: 200px;
+            display: none;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <a class="show-btn" href="#">보이기</a>
+        <a class="hide-btn" href="#">감추기</a>
+        <a class="toggle-btn" href="#">토글</a>
+        <div class="box">box</div>
+    </div>
+    
+
+    <script>
+        $('.show-btn').click(function(){
+            // $('.box').show()
+            $('.container .box').slideDown()
+        })
+        $('.hide-btn').click(function(){
+            // $('.box').slideUp()
+            $('.container .box').slideUp()
+        })
+        $('.toggle-btn').click(function(){
+            // $('.box').show()
+            $('.container .box').slideToggle()
+        })
+    </script>
+</body>
+</html>

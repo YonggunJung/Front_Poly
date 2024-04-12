@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 기본2(CDN)</title>
+    <!-- 여기에  붙혀주는걸 선호 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.js"></script>
+    <style>
+        body{
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>큰 제목</h1>
+    <p class="content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </p>
+
+
+
+    <script>
+        // $('h1').css('color', 'blue');  // 보통 하나 있을때 사용
+        $('h1').css({'color':'red'})       // 여러개 있을때 {} 사용
+        $('.content').css({
+            'border':'2px solid green' , 
+            'padding':'30px',
+            'font-size':'20px'
+        })
+    </script>
+</body>
+</html>

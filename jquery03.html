@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 연습 01</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.js"></script>
+    <style>
+        body{
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <a class="show-btn" href="#">보이기</a>
+    <a class="hide-btn" href="#">감추기</a>
+    <p>태그 선택자 a를 클릭하였습니다</p>
+
+    <script>
+        $('p').css({'display':'none'})
+
+        // jQuery 기본 구문
+        // $('선택자').함수(function(){
+        //     ~~ 실행문  ~~
+        // })
+
+        $('.show-btn').click(function(){
+            $('p').css({'display':'block'})
+        })
+        $('.hide-btn').click(function(){
+            $('p').css({'display':'none'})
+        })
+
+    </script>
+</body>
+</html>

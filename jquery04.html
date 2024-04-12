@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 연습 2</title>
+    <style>
+        body{
+            background-color: #000;
+            color: #fff;
+        }
+        a{
+            display: inline-block;
+            width: 100px;
+            padding: 5px;
+            color: #fff;
+            background-color: #444;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+        }
+        .box{
+            width: 225px; height: 200px;
+            background-color: blue;
+            color: #ccc;
+            margin-top: 10px;
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+            text-align: center;
+            line-height: 200px;
+            display: none;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <a class="show-btn" href="#">보이기</a>
+    <a class="hide-btn" href="#">감추기</a>
+    <div class="box">box</div>
+
+    <script>
+        // $('.show-btn').click(function(){
+        //     $('.box').show()
+        // })
+        // $('.hide-btn').click(function(){
+        //     $('.box').hide()
+        // })
+        // $('.show-btn').click(function(){
+        //     $('.box').slideDown('fast')
+        // })
+        // $('.hide-btn').click(function(){
+        //     $('.box').slideUp('slow')
+        // })
+        $('.show-btn').click(function(){
+            $('.box').fadeIn()
+        })
+        $('.hide-btn').click(function(){
+            $('.box').fadeOut()
+        })
+    </script>
+</body>
+</html>

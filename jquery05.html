@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 연습 3</title>
+    <style>
+        body{
+            background-color: #000;
+            color: #fff;
+        }
+        a{
+            display: inline-block;
+            width: 225px;
+            padding: 5px;
+            color: #fff;
+            background-color: #444;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        .box{
+            width: 225px; height: 200px;
+            background-color: blue;
+            color: #ccc;
+            margin-top: 10px;
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+            text-align: center;
+            line-height: 200px;
+            display: none;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <a class="btn" href="#">보이기/감추기</a>
+    <!-- <a class="hide-btn" href="#">감추기</a> -->
+    <div class="box">box</div>
+
+    <script>
+        // $('.btn').mouseenter(function(){
+        //     $('.box').fadeIn()
+        // })
+        // $('.btn').mouseleave(function(){
+        //     $('.box').fadeOut()
+        // })
+
+        $('.btn').mouseenter(function(){
+            $('.box').stop().fadeIn()
+        })
+        $('.btn').mouseleave(function(){
+            $('.box').stop().fadeOut()
+        })
+    </script>
+</body>
+</html>

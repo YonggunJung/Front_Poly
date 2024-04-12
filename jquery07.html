@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 연습 5</title>
+    <style>
+        body{
+            background-color: #000;
+            color: #fff;
+        }
+        .container{
+            width: 300px;
+
+        }
+        a{
+            display: inline-block;
+            width: 70px;
+            padding: 5px;
+            color: #fff;
+            background-color: #444;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .container div{
+            width: 250px; height: 200px;
+            background-color: blue;
+            color: #ccc;
+            margin-top: 10px;
+            text-align: center;
+            line-height: 200px;
+            /* display: none; */
+        }
+        .container div.active{
+            background-color: red;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <a class="add-btn" href="#">Add</a>
+        <a class="remove-btn" href="#">Remove</a>
+        <a class="toggle-btn" href="#">Toggle</a>
+        <div class="box">box</div>
+    </div>
+    
+
+    <script>
+        $('.add-btn').click(function(){
+            $('.container div').addClass('active')
+        })
+        $('.remove-btn').click(function(){
+            $('.container div').removeClass('active')
+        })
+        $('.toggle-btn').click(function(){
+            $('.container div').toggleClass('active')
+        })
+    </script>
+</body>
+</html>
