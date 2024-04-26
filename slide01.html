@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>auto slide 01</title>
+    <link rel="stylesheet" href="slide01.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" ></script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="slideContainer">
+            <div class="slideShow">
+                <div class="slide">
+                    <p>슬라이드 내용1</p>
+                    <a href="#"><img src="slide1.jpg" alt="그림1"></a>
+                </div>
+                <div class="slide">
+                    <p>슬라이드 내용2</p>
+                    <a href="#"><img src="slide2.jpg" alt="그림2"></a>
+                </div>
+                <div class="slide">
+                    <p>슬라이드 내용3</p>
+                    <a href="#"><img src="slide3.jpg" alt="그림3"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        //setTimeout(할일, 시간)
+        //setInterval(할일, 시간)
+        setInterval(function(){
+            $('.slideShow').animate({'margin-left':'-100%'}, 1500, function(){
+            // $('.slideShow .slide:first-child').appendTo('.slideShow');
+            $('.slideShow .slide').first().appendTo('.slideShow');
+            $('.slideShow').css({'margin-left':'0%'})
+            })
+        },3000)
+        
+    </script>
+</body>
+</html>

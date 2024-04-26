@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>auto slide 02</title>
+    <link rel="stylesheet" href="slide02.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" ></script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="slideShow">
+            <div class="slide">
+                <p>슬라이드 내용1</p>
+                <a href="#"><img src="slide1.jpg" alt="사진1"></a>
+            </div>
+            <div class="slide">
+                <p>슬라이드 내용2</p>
+                <a href="#"><img src="slide2.jpg" alt="사진2"></a>
+            </div>
+            <div class="slide">
+                <p>슬라이드 내용3</p>
+                <a href="#"><img src="slide3.jpg" alt="사진3"></a>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // $('.slideShow .slide').eq(0).fadeOut();
+        // $('.slideShow .slide').eq(1).fadeIn();
+
+        // $('.slideShow .slide').eq(1).fadeOut();
+        // $('.slideShow .slide').eq(2).fadeIn();
+
+        // $('.slideShow .slide').eq(2).fadeOut();
+        // $('.slideShow .slide').eq(0).fadeIn();
+
+        // var let const
+        let indexCount = 0;
+        function showSlide(){
+            if(indexCount >= 2){
+                indexCount = 0;
+            } else{
+                indexCount++;
+            }
+            
+            $('.slideShow .slide').fadeOut();
+            $('.slideShow .slide').eq(indexCount).fadeIn(500);
+        }
+        setInterval(showSlide, 2000)
+        
+    </script>
+</body>
+</html>

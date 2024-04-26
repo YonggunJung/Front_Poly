@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+/* css reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+body{
+    color: #ccc;
+    background-color: #000;
+    }
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.wrap{
+    width: 1300px; height: 300px;
+    margin: auto;
+}
+.slideShow{
+    width: 1300px; height: 300px;
+    position: relative;
+}
+.slide{
+    position: absolute;
+    top: 0; left: 0;
+    display: none;
+}
+.slide:first-child{
+    display: block;
+}
+.slide p{
+    position:absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    background-color: sandybrown;
+    padding: 25px;
+    border-radius: 25px;
+}
