@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animate 연습</title>
+    <style>
+        body{
+        color: #ccc;
+        background-color: #000;
+        }
+        .box{
+            width: 100px; height: 100px;
+            background-color: orange;
+            position: relative;
+        }
+        button{
+            cursor: pointer;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" ></script>
+</head>
+<body>
+    <p>animate()를 이용하여 div요소를 오른쪽으로 250px이동</p>
+    <button>늘리기</button>
+    <div class="box">
+
+    </div>
+
+    <script>
+        $('button').click(function(){
+            $('.box').animate({'height':'250px'}, 500, 'swing')
+        })
+
+        // $('.box').mouseover(function(){
+        //     $(this).stop().animate({'background-color':'blue'}, 500, 'swing')
+        // }).mouseout(function(){
+        //     $(this).stop().animate({'background-color':'red'}, 500, 'swing')
+        // })
+
+        $('.box').hover(function(){
+            $(this).stop().animate({'background-color':'blue'}, 500, 'swing')
+        },function(){
+            $(this).stop().animate({'background-color':'red'}, 500, 'swing')
+        })
+
+    </script>
+</body>
+</html>
