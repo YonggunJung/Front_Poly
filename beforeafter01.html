@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before After</title>
+    <style>
+        body{
+            background-color: #000;
+            color: #fff;
+        }
+        .gnb{
+            margin: 0;
+            font-weight: 300;
+            color: #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+        }
+        a{
+            text-decoration: none;
+            color:inherit;
+            position: relative;
+        }
+        .gnb a::before{
+            content:'01';
+            background-color: blue;
+            color: #fff;
+            border-radius: 50%;
+            display: inline-block;
+            width: 20px; height: 20px;
+            text-align: center;
+            line-height: 20px;
+            font-size: 10px;
+        }
+        .gnb a::after{
+            content:'update';
+            background-color: orange;
+            color: #fff;
+            border-radius: 15%;
+            padding: 2px;
+            font-size: 6px;
+            margin-left: 5px;
+            /* margin-top: 50px; */
+            position: absolute;
+            top: -5px;
+            right: -18px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="gnb">
+        <a href="#">Busan Ploytech Hitech</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object-fit, object-position</title>
+    <style>
+        body {
+            background-color: #000;
+            color: aliceblue;
+        }
+        .f1{
+            border: 3px solid #fff;
+            width: 400px; height: 400px;
+            background: url(/image/woman.jpg) no-repeat left center / cover;
+            margin-bottom: 20px;
+        }
+        .f2{
+            border: 3px solid red;
+            width: 400px; height: 400px;
+        }
+        .f2 img{
+            width: inherit; height: inherit;
+            object-fit: cover;
+            object-position: left;
+        }
+        .f3 img{
+            width: 400px; height: 400px;
+            object-fit: cover;
+            /* object-position: left; */
+        }
+    </style>
+</head>
+<body>
+    <div class="f1"></div>
+    <div class="f2">
+        <img src="/image/woman.jpg" alt="여자">
+    </div>
+    <div class="f3">
+        <img src="/image\front.jpg" alt="">
+    </div>
+</body>
+</html>
