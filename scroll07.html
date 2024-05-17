@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WOW 애니메이션07</title>
+    <style>
+        body {
+            background-color: #000;
+            color: aliceblue;
+        }
+
+        .wrap {
+            width: 800px;
+            margin: auto;
+        }
+
+        .empty {
+            width: 800px;
+            height: 1000px;
+            margin: 20px 0;
+            background-color: aqua;
+        }
+
+        .parent {
+            border: 1px solid #fff;
+            width: 800px;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #333;
+            display: flex;
+            gap: 10px;
+        }
+
+        .parent div {
+            border: 3px solid red;
+            width: 50%;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            font-size: 30px;
+        }
+        .ltr{
+            animation: ltr 2s linear forwards;
+        }
+        .rtl{
+            animation: rtl 2s linear forwards;
+        }
+        @keyframes ltr {
+            0%{opacity:0; transform: translateX(-250px)}
+            100%{opacity:1; transform: translateX(0px)}
+        }
+        @keyframes rtl {
+            0%{opacity:0; transform: translateX(250px)}
+            100%{opacity:1; transform: translateX(0px)}
+        }
+    </style>
+    <script src="wow.min.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <h1>WOW.js 예제</h1>
+        <div class="empty"></div>
+        <div class="parent">
+            <div class="wow ltr">animate__bounceInDown</div>
+            <div class="wow rtl">animate__fadeInLeft</div>
+        </div>
+        <div class="empty"></div>
+        <div class="parent">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="empty"></div>
+        <div class="parent">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="empty"></div>
+    </div>
+    <script>
+        var wow = new WOW(
+            {
+                boxClass: 'wow',      // animated element css class (default is wow)
+                animateClass: 'animate__animated', // animation css class (default is animated)
+                offset: 150,          // distance to the element when triggering the animation (default is 0)
+                mobile: true,       // trigger animations on mobile devices (default is true)
+                live: true,       // act on asynchronously loaded content (default is true)
+                callback: function (box) {
+                    // the callback is fired every time an animation is started
+                    // the argument that is passed in is the DOM node being animated
+                },
+                scrollContainer: null,    // optional scroll container selector, otherwise use window,
+                resetAnimation: true,     // reset animation on end (default is true)
+            }
+        );
+        wow.init();
+    </script>
+</body>
+
+</html>

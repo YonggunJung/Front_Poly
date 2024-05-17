@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크롤 애니메이션 1</title>
+    <style>
+    body{
+        background-color: #000;
+        color: #fff;
+        height: 200vh;
+    }
+    #message{
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        padding: 10px;
+        background-color: #333;
+        border: 1px solid #555;
+    }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div id="message">스크롤 위치</div>
+
+    <script>
+        $(window).scroll(function(){
+            let scrollTop = $(window).scrollTop();
+            $("#message").text("스크롤 위치 : "+scrollTop + "px")
+        })
+        
+    </script>
+</body>
+</html>

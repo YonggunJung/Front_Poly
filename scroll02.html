@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크롤 애니메이션 2</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        body{
+            background-color: #000;
+            color: #fff;
+            height: 200vh;
+        }
+        #offset{
+            width: 200px; height: 200px;
+            background-color: orange;
+            position: relative;
+            top: 100px; left: 200px;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div id="offset">오프셋 위치</div>
+    <button class="btn">위로</button>
+
+    <script>
+        // let offset = $("#offset").offset();
+        // console.log("left : ", offset.left)
+        // console.log("top : ", offset.top)
+        let offset = $('#offset').offset().top;
+        console.log(offset);
+        // $('#offset').offset({left : 200, top:200})
+        $('.btn').click(function(){
+            $(window).scrollTop(0, 0);
+        })
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AOS WOW 애니메이션</title>
+    <style>
+        body{
+            background-color: #000;
+            color: aliceblue;
+        }
+        .wrap{
+            width: 800px;
+            margin: auto;
+        }
+        .empty{
+            width: 800px; height: 1000px;
+            margin: 20px 0;
+            background-color: aqua;
+        }
+        .parent{
+            border: 1px solid #fff;
+            width: 800px;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #333;
+            display: flex;
+            gap: 10px;
+        }
+        .parent div{
+            border: 3px solid red;
+            width: 50%; height: 200px;
+            text-align: center;
+            line-height: 200px;
+            font-size: 30px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <h1>AOS 예제</h1>
+        <div class="empty"></div>
+        <div class="parent">
+            <div class="animate__backInLeft">animate__backInLeft</div>
+            <div class="animate__backOutRight">animate__backOutRight</div>
+        </div>
+        <div class="empty"></div>
+        <div class="parent">
+            <div class="animate__bounceInDown">animate__bounceInDown</div>
+            <div class="animate__lightSpeedInLeft">animate__lightSpeedInLeft</div>
+        </div>
+        <div class="empty"></div>
+        <div class="parent">
+            <div class="animate__flipOutX">animate__flipOutX</div>
+            <div class="animate__flipOutY">animate__flipOutY</div>
+        </div>
+        <div class="empty"></div>
+    </div>
+    <script>
+        wow = new WOW(
+                      {
+                      boxClass:     'wow',      // default
+                      animateClass: 'animated', // default
+                      offset:       0,          // default
+                      mobile:       true,       // default
+                      live:         true        // default
+                    }
+                    )
+                    wow.init();
+    </script>
+</body>
+</html>
