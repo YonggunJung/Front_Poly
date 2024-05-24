@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+    
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+*{
+    margin: 0;
+    font-family: "Noto Sans", sanss-serif;
+    font-weight: 300;
+    font-size: 15px;
+    color: #bbb;
+    line-height: 1.5em;
+}
+body {
+    background-color: #000;
+    color: aliceblue;
+    }
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+section{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inner{
+    width: 1200px;
+    /* border: 1px solid red; */
+}
+.heading{
+    text-align: center;
+    font-size: 45px;
+    font-weight: 500;
+    position: relative;
+    margin-bottom: 50px;
+    padding-bottom: 25px;
+}
+.heading::after{
+    content: "";
+    width: 100px; height: 5px;
+    background-color: crimson;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.items{
+    display: flex;
+    gap: 20px;
+}
+.item{
+    flex: 1;
+    /* border: 3px solid blue; */
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+}
+.photo{
+    overflow: hidden;
+    width: 100%; height: 250px;
+}
+.photo img{
+    width: inherit; height: inherit;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.5s;;
+}
+.item:hover .photo img{
+    transform: scale(1.2);
+}
+.detail{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.detail h2{
+    font-weight: 500;
+    font-size: 1.2em;
+}
+.detail p{
+    flex: 1;
+}
+.user-info{
+    display: flex;
+    justify-content: space-between;
+}
+.user img{
+    width: 50px; height: 50px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+.comment{
+    display: block;
+    margin-top: 10px;
+}
+.btn-explore{
+    background-color: dodgerblue;
+    color: #fff;
+    display: block;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 10px;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout 01</title>
+    <style>
+        *{margin: 0;}
+        body {
+            background-color: #000;
+            color: aliceblue;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+        }
+        .wrap{
+            display: grid;
+            gap: 10px;
+            width: 1200px; height: 100vh;
+            justify-content: center;
+            align-content: center;
+            grid-template-columns: 300px 1fr 300px;
+            grid-template-rows: 100px 150px 1fr 150px 100px;
+            grid-template-areas: 
+            'header header header'
+            'nav main top'
+            'nav main aside'
+            'nav main bottom'
+            'footer footer footer';
+        }
+        .wrap > *{
+            background-color: darkslategrey;
+            padding: 20px;
+        }
+        .header{
+            grid-area: header;
+        }
+        .nav{
+            grid-area: nav;
+        }
+        .main{
+            grid-area: main;
+        }
+        .top{
+            grid-area: top;
+        }
+        .aside{
+            grid-area: aside;
+        }
+        .bottom{
+            grid-area: bottom;
+        }
+        .footer{
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">header</header>
+        <nav class="nav">navigation</nav>
+        <main class="main">main</main>
+        <div class="top">top</div>
+        <aside class="aside">aside</aside>
+        <div class="bottom">bottom</div>
+        <footer class="footer">footer</footer>
+    </div>
+    
+</body>
+</html>

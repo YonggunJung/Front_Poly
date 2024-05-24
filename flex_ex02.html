@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex 다시 연습</title>
+    <style>
+        body {
+        background-color: #000;
+        color: aliceblue;
+        }
+        .container{
+            width: 500px; height: 500px;
+            background-color: #444;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+        .box{width: 100px; height: 100px; /*flex: 1;*/}
+        .box1{background-color: gold;}
+        .box2{background-color: orangered; flex: 1;}
+        .box3{background-color: yellowgreen; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+    </div>
+</body>
+</html>

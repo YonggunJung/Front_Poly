@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout 02</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #000;
+            color: aliceblue;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+        }
+        .container{
+            display: grid;
+            gap: 10px;
+            width: 800px; height: 800px;
+            justify-content: center;
+            align-content: center;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr) ;
+            grid-template-areas: 
+            'one two two'
+            'one five three'
+            'four four three';
+        }
+        .container div{
+            background-color: gold;
+            padding: 20px;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            font-size: 40px;
+        }
+        .one{grid-area: one;}
+        .two{grid-area: two;}
+        .three{grid-area: three;}
+        .four{grid-area: four;}
+        .five{grid-area: five;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+        <div class="four">4</div>
+        <div class="five">5</div>
+    </div>
+</body>
+</html>
