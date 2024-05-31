@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Tooltip</title>
+    <style>
+        @import url("https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+        body{
+            background-color: #000;
+            color:aliceblue;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .tooltip{
+            /* border: 1px solid red; */
+            position: relative;
+        }
+        .tooltip i{
+            font-size: 50px;
+            color: deepskyblue;
+        }
+        .tooltip span{
+            position: absolute;
+            background-color: #fff;
+            color: #000;
+            width: 250px;
+            text-align: center;
+            top: -60px;
+            left: 50%;
+            transform: translate(-50%);
+            padding: 5px;
+            /* box-sizing: border-box; */
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
+        }
+        .tooltip span::after{
+            content: '\25BC';
+            
+            /* font-family: xeicon; */
+            /* width: 10px; height: 10px;
+            background-color: #fff;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            /* transform은 하나의 요소에 한번만 사용 가능. 그래서 나열 해야함 */
+            /*transform: translateX(-50%) rotate(45deg); */
+        }
+        .tooltip:hover span{
+            /* display: block; */
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <div class="tooltip">
+        <i class="xi-help"></i>
+        <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</span>
+    </div>
+</body>
+</html>

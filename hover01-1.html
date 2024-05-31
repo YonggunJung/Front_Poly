@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover 아웃라인</title>
+    <style>
+        body{
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            height: 100vh;
+            /* text-align: center;
+             line-height: 100vh; 가운데 놓기 1번 */
+            display: flex;
+            justify-content: center;
+             align-items: center;   /*가운데 놓기 2번 */
+            /* position: relative; */
+        }
+        .btn{
+            /* position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); */
+            text-decoration: none;
+            color: transparent;
+            font-size: 150px;
+            font-weight: 600;
+            -webkit-text-stroke: 1px #fff;  /* 외곽선 */
+            position: relative;
+        }
+        .btn::before, .btn::after{
+            content: attr(data-x);
+            /* content: "Portfolio"; 똑같다.*/
+            position: absolute;
+            top: 0; left: 0;
+            -webkit-text-stroke: 1px transparent;
+            opacity: 0;
+            transition: 0.3;
+        }
+        .btn::before{  
+            color: deepskyblue;
+        }
+        .btn::after{
+            color: deeppink;
+        }
+        .btn:hover{
+            color: #fff;
+        }
+        .btn:hover::before{
+            opacity: 1;
+            transform: translate(10px, -10px);
+        }
+        .btn:hover::after{
+            opacity: 1;
+            transform: translate(20px, -20px);
+        }
+
+    </style>
+</head>
+<body>
+    <a class="btn" data-x="Portfolio" href="#">Portfolio</a>
+</body>
+</html>

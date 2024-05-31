@@ -1,0 +1,52 @@
+body{
+    background-color: #000;
+    color: aliceblue;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.frame{
+    display: flex;
+    gap: 20px;
+}
+.octagon{
+    width: 400px; height: 450px;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 19%, 100% 79%, 70% 100%, 30% 100%, 0 82%, 0 19%);
+    position: relative;
+}
+.frame .octagon img{
+    width: inherit; height: inherit;
+    object-fit: cover;
+}
+.octagon .caption{
+    width: inherit; height: inherit;
+    position: absolute;
+    /* top: 50%; left: 50%;
+    transform: translate(-50%, -50%); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: 0.3s;
+    transform: translateY(20px);
+}
+.octagon:hover .caption{
+    opacity: 1;
+    transform: translateY(0px);
+}
+.octagon:nth-child(1) .caption{
+    background: linear-gradient(to top, green, transparent);
+}
+.octagon:nth-child(2) .caption{
+    background: linear-gradient(to top, crimson, transparent);
+}
+.octagon:nth-child(3) .caption{
+    background: linear-gradient(to top, rgb(224, 192, 9), transparent);
+}
+.octagon:hover{transform: translateY(-50px);}
