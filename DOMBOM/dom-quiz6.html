@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동적으로 아이템 추가/삭제</title>
+</head>
+<body>
+    <h1>동적으로 아이템 추가/삭제</h1>
+    <button id="addItemButton">Add Item</button>
+    <button id="removeItemButton">remove Item</button>
+    <!-- createElement('요소'), 요소.textContent = '', 요소.appendChild(); -->
+    <ul id="toDoList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <script>
+        const addItemButton = document.querySelector('#addItemButton');
+        const removeItemButton = document.querySelector('#removeItemButton');
+        const toDoListUl = document.querySelector('#toDoList');
+
+        //추가버튼 이벤트
+        addItemButton.addEventListener('click', ()=>{
+            const userInput = window.prompt('추가할 아이템을 입력하세요');
+            if(userInput){
+                const newItem = document.createElement('li');
+                newItem.textContent = userInput;
+                toDoListUl.appendChild(newItem);
+            }
+        });
+
+        //삭제버튼 이벤트
+        removeItemButton.addEventListener('click', ()=>{
+            const totalItems = toDoListUl.children.length;
+            if(totalItems == 0){
+                alert('삭제할 아이템이 없습니다.')
+                return;
+            }
+            const itemIndex = window.prompt(`삭제할 아이템 번호를 입력하세요. (1~ ${totlaItems})`);
+            if(!isNaN(itemIndex)){
+                const index = itemIndex - 1;
+                if (index >=0 && index < itemIndex){
+                    const confirmation = window.confirm(`정말로 ${itemIndex}번 아이템을 지우겠습니다?`)
+                    if(confirmation){
+                        toDoListUl.removeChild(toDoListUl.children[index])
+                    }
+                } else{
+                    alert('유효하지 않은 아이템 번호입니다.')
+                }
+            } else{
+                alert('숫자를 입력하세요.')
+            }
+        });
+    </script>
+</body>
+</html>

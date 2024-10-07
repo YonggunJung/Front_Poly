@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>브라우저 창 크기에 따른 배경색 변화</title>
+</head>
+<body>
+    <h1 id="title">브라우저 창 크기에 따른 배경색 변화</h1>
+
+    <script>
+        const h1Element = document.querySelector('#title');
+
+        // window.innerWidth : 윈도우창 너비
+        // 이벤트 종류 : resize
+        // <600, 600> = <1200, else>
+
+        window.addEventListener('resize', ()=>{
+            const width = window.innerWidth;
+            if(width <600){
+                document.body.sytle.backgroundColor = '#FFD700';
+                h1Element.textContent = '창의 너비가 600px미만';
+            } else if(width >=600 && width < 1200){
+                document.body.sytle.backgroundColor = '#87CEEB';
+                h1Element.textContent = '창의 너비가 600px이상 1200px미만';
+            } else{
+                document.body.sytle.backgroundColor = '#32CD32';
+                h1Element.textContent = '창의 너비가 1200px이상 1200px미만';
+            }
+        })
+    </script>
+</body>
+</html>

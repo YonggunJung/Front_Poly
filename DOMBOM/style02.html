@@ -1,0 +1,22 @@
+<!-- 제이쿼리 -->
+ <!-- $(#id').css('color', 'red') -->
+<!-- $('#myImage').attr('src', 'new-image.jpg') -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 속성 변경</title>
+</head>
+<body>
+    <img id="myImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSayzFV4TvY_t5ynst6FMKEchrntX5faQ6xVg&s">
+    <button id="btn">이미지 변경</button>
+
+    <script>
+        const button = document.getElementById('btn');
+        button.addEventListener('click', function(){
+            document.getElementById('myImage').src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSsiMmzjZTpuEG6xbCfGcAzwfMq3Uw1uWZtQ&s';
+        });
+    </script>
+</body>
+</html>

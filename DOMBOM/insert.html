@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreateElement AppendChild</title>
+</head>
+<body>
+    <div id="container"></div>
+    
+    <script>
+        document.createElement('p');
+        p.textContent = 'Hello';
+        document.getElementById('container').appendChild(p); // 제일 마지막 요소로 삽입
+        // 첫번째 자식으로 삽입 insertBefore()
+
+        //$('#container').append('<p>Hello</p>')
+        // prepend()
+    </script>
+</body>
+</html>

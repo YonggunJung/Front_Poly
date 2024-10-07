@@ -1,0 +1,26 @@
+<!-- 클래스 추가, 제거, 토글 -->
+ <!DOCTYPE html>
+ <html lang="ko">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classList</title>
+    <style>
+        .active{
+            background-color: yellow;
+        }
+    </style>
+ </head>
+ <body>
+    <button id="btn" class="active">배경색 변화</button>
+    <script>
+        const button = document.getElementById('btn');
+        button.addEventListener('click', function(){
+            button.classList.toggle('active');      // add, remove, container, refresh
+        });
+
+        // $(#btn).addClass('active')
+        // removeClass, toggleClass
+    </script>
+ </body>
+ </html>

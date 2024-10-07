@@ -1,0 +1,23 @@
+<!-- 제이쿼리 -->
+ <!-- $(#id').css('color', 'red') -->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 속성 변경</title>
+</head>
+<body>
+    <p id="id">이 문장의 색상 변경</p>
+    <button id="btn">색상변경</button>
+
+    <script>
+        const p = document.getElementById('para');
+        const button = document.getElementById('btn');
+        button.addEventListener('click', function(){
+            document.getElementById('para').style.color = 'red';
+        });
+    </script>
+</body>
+</html>

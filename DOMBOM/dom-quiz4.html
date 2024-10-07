@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자가 입력한 값으로 list 항목 추가</title>
+</head>
+<body>
+    <h1>Dynamic To-Do List</h1>
+    <button id="addItemButton">Add Item</button>
+    <ul id="toDoList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+
+    <script>
+        const addItemButton = document.querySelector('#addItemButton');
+        const toDoList = document.querySelector('#toDoList')
+
+        addItemButton.addEventListener('click', () =>{
+            const userInput = window.prompt('Input new Item...')
+            if (userInput){
+                const newItem = document.createElement('li');
+                newItem.textContent = userInput;
+                toDoList.appendChild(newItem);
+            }
+        })
+    </script>
+</body>
+</html>

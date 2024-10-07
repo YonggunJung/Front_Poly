@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 버블링</title>
+</head>
+<body>
+    <div id="outerDiv">
+        <button id="innerButton">버튼</button>
+    </div>
+
+    <script>
+        const outerDiv = document.getElementById('outerDiv');
+        const innerButton = document.getElementById('innerButton');
+
+        outerDiv.addEventListener('click', function(){
+            console.log('div 클릭됨');
+        });
+
+        innerButton.addEventListener('click', function(){
+            event.stopPropagation();    //부모에게 전파되는 버블링을 방지
+            console.log('button 클릭됨');
+        });
+    </script>
+</body>
+</html>
